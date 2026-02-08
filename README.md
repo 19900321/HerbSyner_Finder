@@ -1,10 +1,6 @@
 # syn_net_CVA is a novel network-based framework for synergistic ingredients discovery from herb medicines
 
-<p align="center">
-  <img src="Figure1.png" alt="Overview Figure" width="800">
-  <br>
-  <em>Overview of network framework. (A) Systematic comparison of five prescriptions for CVA on their therapeutic targets. (B) Identify synergistic ingredients of CVA prescriptions through a comprehensive combination landscape (C) Experimental validation of synergistic ingredients.</em>
-</p>
+
 
  Herbal medicine presents a promising alternative, offering enhanced synergistic efficacy and reduced side effects through combined herbal formulations. 
  
@@ -28,6 +24,12 @@ A General Tool for Synergistic Ingredient Discovery in Herbal Medicine
 
 HerbSyner_Finder is a computational pipeline designed to discover synergistic ingredient combinations in herbal medicine using network-based approaches and community detection algorithms. This tool helps identify key therapeutic modules and potential synergistic herb combinations for specific diseases through advanced network analysis.
 
+<p align="center">
+  <img src="Figure1.png" alt="Overview Figure" width="800">
+  <br>
+  <em>Overview of network framework. (A) Systematic comparison of five prescriptions for CVA on their therapeutic targets. (B) Identify synergistic ingredients of CVA prescriptions through a comprehensive combination landscape (C) Experimental validation of synergistic ingredients.</em>
+</p>
+
 ## Features
 
 - **Network-based distance calculation**: Compute distances between herbs and ingredients in biological networks
@@ -49,22 +51,33 @@ pip install communities==2.1.1
 pip install networkx==2.8.4
 pip install scikit-learn==1.2.2
 pip install pandas numpy matplotlib seaborn openpyxl
-
+```
 
 Install from PyPI
-bash
+
+```bash
 pip install herbSyner_Finder
 Install from Source
-bash
+```
+
+
+
 # Clone the repository
+```bash
 git clone https://github.com/[username]/herbSyner_Finder.git
 cd herbSyner_Finder
+```
 
 # Install the package
+```bash
 pip install -e .
+
+```
+
 Quick Start
+
 1. Import Required Modules
-python
+```python
 import pickle
 import networkx as nx
 import pandas as pd
@@ -73,11 +86,14 @@ from herbSyner_Finder import Herb_Comb_Community
 from herbSyner_Finder import Detection_key_Module_multiple
 from herbSyner_Finder import herb_synergy_landscape
 from herbSyner_Finder import generate_objects
+```
+
 2. Load Data Objects
-python
+```python
 g_obj, ingredients_obj, herb_obj, herb_info, fangji, disease_obj, herb_distance_obj = generate_objects.load_obj_data()
+```
 3. Set Save Path and File Paths
-python
+```python
 save_path = "result"
 HIf = 'result/herb_ingredient_pairs_pd.csv'
 HHf = 'result/herb_herb_dis_pd.csv'
@@ -85,11 +101,13 @@ IIf = 'result/ingre_ingre_dis_pd.csv'
 DHf = 'result/herb_disease_pd.csv'
 DIf = 'result/herb_disease_ingre_pd.csv'
 disease_name = "Cough Variant Asthma"
+```
+
 Complete Example Code
 Here's a complete example showing the full workflow:
-
-python
-import pickle
+```python
+import
+ pickle
 import networkx as nx
 import pandas as pd
 import herbSyner_Finder
@@ -142,28 +160,8 @@ ADMET = pd.read_excel(ADMETf).drop_duplicates()
 # Detect herb communities
 herb_commuties_case_obj = Herb_Comb_Community(HH, II, DH, DI, disease_name)
 G, communities, DHI_result, subset_data_I, subset_data_H, node_detect_df = herb_commuties_case_obj.get_herb_communities(ADMET_filter = True)
+```
 
-# Step 3: Further detect the key module with main synergistic effects
-# Prepare necessary files
-comb_data_ingre_list = [subset_data_I]
-comb_name_ingre_list = ['SH']
-comb_data_herb_list = [subset_data_H]
-comb_name_herb_list = ['SH']
-comb_data_merged_list = [herb_commuties_case_obj.sum_file_all]
-comb_name_merged_list = ['SH']
-
-mocule_dataset_list = [comb_data_ingre_list, 
-                       comb_name_ingre_list,
-                       comb_data_herb_list,
-                       comb_name_herb_list,
-                       comb_data_merged_list,
-                       comb_name_merged_list]
-
-# Detection_key_Module_multiple
-module_multiple = Detection_key_Module_multiple(*mocule_dataset_list)
-module_multiple.prepare_downstream_data(save_path)
-
-print("Analysis completed successfully! Results saved in 'result/' directory.")
 Input Files Required
 Essential Data Files:
 Herb-Ingredient Pairs (herb_ingredient_pairs_pd.csv): Mapping between herbs and their chemical ingredients
