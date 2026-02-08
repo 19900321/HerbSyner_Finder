@@ -162,8 +162,9 @@ herb_commuties_case_obj = Herb_Comb_Community(HH, II, DH, DI, disease_name)
 G, communities, DHI_result, subset_data_I, subset_data_H, node_detect_df = herb_commuties_case_obj.get_herb_communities(ADMET_filter = True)
 ```
 
-Input Files Required
-Essential Data Files:
+
+## Essential Data Files:
+
 Herb-Ingredient Pairs (herb_ingredient_pairs_pd.csv): Mapping between herbs and their chemical ingredients
 
 Herb-Herb Distances (herb_herb_dis_pd.csv): Network distances between herb pairs
@@ -174,49 +175,9 @@ Herb-Disease Associations (herb_disease_pd.csv): Herb-disease therapeutic relati
 
 Herb-Disease-Ingredient Associations (herb_disease_ingre_pd.csv): Detailed associations between herbs, ingredients, and diseases
 
-Optional:
-ADMET Properties (ingredient_ADMET_Properties.xlsx): Pharmacokinetic properties for filtering (Absorption, Distribution, Metabolism, Excretion, Toxicity)
 
-Output Files
-The pipeline generates several output files:
 
-Network graphs with detected communities
-
-Key module identification results
-
-Synergistic combination predictions
-
-Visualizations of herb-ingredient-disease landscapes
-
-Statistical analysis of community structures
-
-Parameters
-Key Parameters:
-cal_combination_disease():
-
-random_time: Number of randomizations for significance testing
-
-Recommendation: 100-1000 for publication quality results
-
-Exploratory analysis: 10-100 iterations
-
-disease_list: List of target diseases for analysis
-
-get_herb_communities():
-
-ADMET_filter: Boolean flag to filter ingredients based on ADMET properties
-
-disease_name: Specific disease target for community detection
-
-Community Detection:
-Uses Louvain algorithm via the communities package
-
-Modularity optimization for community structure identification
-
-Adjustable resolution parameters for community granularity
-
-Dependencies
-Core Dependencies:
+## Dependencies
 communities 2.1.1: Community detection algorithms (GitHub)
 
 networkx 2.8.4: Network analysis and graph operations
@@ -229,55 +190,15 @@ numpy: Numerical computations
 
 matplotlib/seaborn: Visualization
 
-Optional Dependencies:
 jupyter: For running example notebooks
 
 tqdm: For progress bars in lengthy computations
 
-Citation
-If you use HerbSyner_Finder in your research, please cite:
 
-bibtex
-@software{herbsyner_finder,
-  title = {HerbSyner_Finder: A General Tool for Synergistic Ingredient Discovery in Herbal Medicine},
-  author = {[Author Name]},
-  year = {2024},
-  url = {https://github.com/[username]/herbSyner_Finder}
-}
-License
-[Add your license information here, e.g., MIT License]
-
-Support
-For issues, questions, or contributions:
-
-Check the example notebook: example.ipynb provides a complete workflow
-
-Open an issue: GitHub Issues
-
-Contact: [Your email/contact information]
-
-Contributing
-We welcome contributions! Please feel free to submit a Pull Request.
-
-Fork the repository
-
-Create your feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-References
+## References
 Communities package documentation
 
 NetworkX documentation: https://networkx.org/
 
 Scikit-learn documentation: https://scikit-learn.org/
 
-Note: The computational time for Step 1 increases with higher random_time values. For exploratory analysis, use lower values (10-100); for publication-quality results, use 1000+ iterations. The example notebook provides a complete workflow with sample data.
-
-text
-
-Simply copy this entire content and paste it into a file named `README.md` in your GitHub repository root directory.
