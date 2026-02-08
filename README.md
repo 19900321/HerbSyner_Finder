@@ -18,3 +18,34 @@ Our framework constructs a combinational atlas for each herbal medicine, quantif
 
 Our network model offers novel insights into combinational strategies for treating CVA and has successfully identified effective herbal drug combinations from herbal medicines, specifically berberine and luteolin.
 
+
+
+# HerbSyner_Finder
+
+A General Tool for Synergistic Ingredient Discovery in Herbal Medicine
+
+## Overview
+
+HerbSyner_Finder is a computational pipeline designed to discover synergistic ingredient combinations in herbal medicine using network-based approaches and community detection algorithms. This tool helps identify key therapeutic modules and potential synergistic herb combinations for specific diseases through advanced network analysis.
+
+## Features
+
+- **Network-based distance calculation**: Compute distances between herbs and ingredients in biological networks
+- **Community detection**: Identify communities in herb-ingredient-disease networks using Louvain algorithm
+- **Key module identification**: Detect synergistic modules with main therapeutic effects
+- **ADMET property filtering**: Filter ingredients based on drug-likeness properties
+- **Multi-disease support**: Analyze multiple disease targets simultaneously
+- **Visualization tools**: Generate comprehensive synergy landscapes
+
+## Installation
+
+### Prerequisites
+
+- Python 3.10.11
+- Required Python packages:
+
+```bash
+pip install communities==2.1.1
+pip install networkx==2.8.4
+pip install scikit-learn==1.2.2
+pip install pandas numpy matplotlib seaborn openpyxl
