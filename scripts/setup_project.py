@@ -9,6 +9,7 @@ sys.path.insert(0, str(project_root))
 from cal_network_distance.generate_objects import generate_network_data
 
 if __name__ == "__main__":
-    print("设置项目：生成必要的数据文件")
+    print("enerate network data")
     data = generate_network_data()
-    print("项目设置完成！")
+
+    print(Done")
