@@ -1,4 +1,4 @@
-# HerbSyner_Finder
+<img width="451" height="31" alt="image" src="https://github.com/user-attachments/assets/0526b6d2-4a9a-4f31-b30f-50886f6595eb" /># HerbSyner_Finder
 
 A General Tool for Synergistic Ingredient Discovery in Herbal Medicine
 
@@ -149,7 +149,8 @@ tqdm: For progress bars in lengthy computations
 
 
 ## References
-Communities package documentation
+Communities package documentation: https://pypi.org/project/communities/
+pip install communities
 
 NetworkX documentation: https://networkx.org/
 
