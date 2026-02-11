@@ -12,7 +12,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 def load_obj_data():
-    g_obj = Construct_Network("source_data/toy.sif")
+    g_obj = Construct_Network("source_data/PPI.sif")
     g_obj.get_degree_binning(1001)
 
     filename = 'source_data/stitch_database_chemical_target_sum.xlsx'
@@ -40,3 +40,4 @@ if __name__ == '__main__':
     pass
     
     
+
