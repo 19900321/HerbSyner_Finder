@@ -46,7 +46,7 @@ Install from Source
 
 Clone the repository
 ```bash
-git clone https://github.com/[username]/herbSyner_Finder.git
+git clone https://github.com/19900321/HerbSyner_Finder.git
 cd herbSyner_Finder
 ```
 
