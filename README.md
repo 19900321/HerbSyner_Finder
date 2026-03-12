@@ -7,11 +7,14 @@ HerbSyner_Finder is a computational pipeline designed to discover synergistic in
 <p align="center">
   <img src="Figure1.png" alt="Overview Figure" width="800">
   <br>
-  <em>Overview of network framework. (A) Systematic comparison of five prescriptions for CVA on their therapeutic targets. (B) Identify synergistic ingredients of CVA prescriptions through a comprehensive combination landscape (C) Experimental validation of synergistic ingredients.</em>
+  <em>Overview of network framework. </em>
 </p>
 
+
 ## Website
+
 Good news!!! We have developed a web server for HerbSyner_Finder calculations via interactive task submission at https://herbcomb.com/#/main/finder_synergy, which is user-friendly for those without programming skills. 
+
 
 ## Features
 
