@@ -7,7 +7,7 @@ HerbSyner_Finder is a computational pipeline designed to discover synergistic in
 <p align="center">
   <img src="Figure1.png" alt="Overview Figure" width="800">
   <br>
-  <em>Overview of network framework. </em>
+  <em>Overview of HerbSyner_Finder. </em>
 </p>
 
 
@@ -24,6 +24,10 @@ Good news!!! We have developed a web server for HerbSyner_Finder calculations vi
 - **ADMET property filtering**: Filter ingredients based on drug-likeness properties
 - **Multi-disease support**: Analyze multiple disease targets simultaneously
 - **Visualization tools**: Generate comprehensive synergy landscapes
+
+## Citation
+Citation: Wang Y, Yao J, Sui Y, Jiang H, Ma B, et al. 2026. HerbSyner_Finder: a network community-based model for identifying synergistic combinations from
+herbal medicines and complex systems. Targetome 2(2): https://doi.org/10.48130/targetome-0026-0013
 
 ## Installation
 
