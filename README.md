@@ -37,10 +37,11 @@ herbal medicines and complex systems. Targetome 2(2): https://doi.org/10.48130/t
 - Required Python packages:
 
 ```bash
-pip install communities==2.1.1
+
 pip install networkx==2.8.4
 pip install scikit-learn==1.2.2
 pip install pandas numpy matplotlib seaborn openpyxl
+pip install communities
 ```
 
 Install from PyPI
