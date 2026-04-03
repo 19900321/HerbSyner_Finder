@@ -48,7 +48,7 @@ Install from PyPI
 
 ```bash
 pip install herbSyner_Finder
-Install from Source
+
 ```
 
 
