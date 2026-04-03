@@ -40,8 +40,10 @@ herbal medicines and complex systems. Targetome 2(2): https://doi.org/10.48130/t
 
 pip install networkx==2.8.4
 pip install scikit-learn==1.2.2
-pip install pandas numpy matplotlib seaborn openpyxl
+pip install pandas matplotlib seaborn openpyxl
+pip install "numpy<2.0.0" --force-reinstall
 pip install communities
+pip install tqdm
 ```
 
 Install from PyPI
